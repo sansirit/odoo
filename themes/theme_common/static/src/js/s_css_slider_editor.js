@@ -16,8 +16,8 @@ odoo.define('theme_common.s_css_slider_editor', function (require) {
             });
 
             setTimeout(function () {
-                self.$overlay.find(".js_s_css_slider_addSlide").on('click', function () { self.addSlide(); });
-                self.$overlay.find(".js_s_css_slider_removeSlide").on('click', function () { self.removeSlide(); });
+                self.$overlay.data('$optionsSection').find(".js_s_css_slider_addSlide").on('click', function () { self.addSlide(); });
+                self.$overlay.data('$optionsSection').find(".js_s_css_slider_removeSlide").on('click', function () { self.removeSlide(); });
             }, 100);
 
             $(document.body).on("media-saved", function () {

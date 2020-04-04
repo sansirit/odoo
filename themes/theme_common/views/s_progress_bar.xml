@@ -10,24 +10,23 @@
 
     <template id="s_options_progress_bar" inherit_id="website.snippet_options">
         <xpath expr="." position="inside">
-            <div data-js="progress" data-selector=".s_progress_bar .progress-bar"/>
             <div data-js="colorpicker" data-selector=".s_progress_bar" data-target=".progress-bar">
-                <div class="dropdown-submenu">
-                    <a tabindex="-2" href="#" class="dropdown-item"><i class="fa fa-eyedropper"/>Colors</a>
-                    <div class="dropdown-menu" role="menu"/>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-eyedropper"/> Colors</we-toggler>
+                    <we-collapse/>
+                </we-collapse-area>
             </div>
             <div data-js="progress" data-selector=".s_progress_bar" data-target=".progress-bar">
-                <div class="dropdown-submenu">
-                    <a tabindex="-2" href="#" class="dropdown-item"><i class="fa fa-magic"/>Styles</a>
-                    <div class="dropdown-menu" role="menu">
-                        <a href="#" class="dropdown-item" data-toggle-class="progress-bar-striped">Striped</a>
-                        <a href="#" class="dropdown-item" data-toggle-class="progress-bar-animated">Animated</a>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-magic"/> Styles</we-toggler>
+                    <we-collapse>
+                        <we-button data-toggle-class="progress-bar-striped">Striped</we-button>
+                        <we-button data-toggle-class="progress-bar-animated">Animated</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
-        <xpath expr="//div[@data-js='content']" position="attributes">
+        <xpath expr="//div[@id='so_content_addition']" position="attributes">
             <attribute name="data-selector" add=".s_progress_bar" separator=","/>
             <attribute name="data-drop-near" add=".s_progress_bar" separator=","/>
         </xpath>

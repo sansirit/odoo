@@ -90,11 +90,10 @@
     <template id="s_options_pricing" inherit_id="website.snippet_options">
         <xpath expr="." position="inside">
             <div data-js="colorpicker" data-selector=".s_pricing_box" data-target=".s_pricing_header, .s_pricing_footer">
-                <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#">Colors</a>
-                    <div class="dropdown-menu">
-                    </div>
-                </li>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-eyedropper"/> Colors</we-toggler>
+                    <we-collapse/>
+                </we-collapse-area>
             </div>
         </xpath>
     </template>

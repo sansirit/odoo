@@ -26,25 +26,25 @@
     <template id="s_showcase_image-opt" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='background']" position="before">
             <div data-selector=".s_showcase_image">
-                <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#"><i class="fa fa-exchange"/>Image position</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item" data-select-class="">Left</a>
-                        <a href="#" class="dropdown-item" data-select-class="s_right">Right</a>
-                    </div>
-                </li>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-exchange"/> Image position</we-toggler>
+                    <we-collapse>
+                        <we-button data-select-class="">Left</we-button>
+                        <we-button data-select-class="s_right">Right</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
 
             <div data-selector=".s_showcase_image figure">
-                <li class="dropdown-submenu">
-                    <a tabindex="-1" href="#"><i class="fa fa-tag"/>Caption position</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item" data-select-class="tl">Top Left</a>
-                        <a href="#" class="dropdown-item" data-select-class="tr">Top Right</a>
-                        <a href="#" class="dropdown-item" data-select-class="bl">Bottom Left</a>
-                        <a href="#" class="dropdown-item" data-select-class="">Bottom Right</a>
-                    </div>
-                </li>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-tag"/> Caption position</we-toggler>
+                    <we-collapse>
+                        <we-button data-select-class="tl">Top Left</we-button>
+                        <we-button data-select-class="tr">Top Right</we-button>
+                        <we-button data-select-class="bl">Bottom Left</we-button>
+                        <we-button data-select-class="">Bottom Right</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
 

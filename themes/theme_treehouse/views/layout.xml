@@ -39,9 +39,6 @@
                                 <a t-if="website.social_youtube" t-att-href="website.social_youtube" target="_blank">
                                     <i class="fa fa-youtube fa-1x"/>
                                 </a>
-                                <a t-if="website.social_googleplus" t-att-href="website.social_googleplus" target="_blank">
-                                    <i class="fa fa-google-plus fa-1x"/>
-                                </a>
                                 <a t-if="website.social_github" t-att-href="website.social_github" target="_blank">
                                     <i class="fa fa-github fa-1x"/>
                                 </a>

@@ -3,20 +3,12 @@
     <!-- Theme logo -->
     <record id="image_content_logo" model="theme.ir.attachment">
         <field name="key">theme_common.image_content_logo</field>
-        <field name="name">theme_common.image_content_logo</field>
         <field name="name">image_content_logo.png</field>
-        <field name="datas_fname">image_content_logo.png</field>
-        <field name="res_model">ir.ui.view</field>
-        <field name="type">url</field>
         <field name="url">/theme_clean/static/src/img/content/image_content_logo.png</field>
     </record>
     <record id="image_content_logo_small" model="theme.ir.attachment">
         <field name="key">theme_common.image_content_logo_small</field>
-        <field name="name">theme_common.image_content_logo_small</field>
         <field name="name">image_content_logo_small.png</field>
-        <field name="datas_fname">image_content_logo_small.png</field>
-        <field name="res_model">ir.ui.view</field>
-        <field name="type">url</field>
         <field name="url">/theme_clean/static/src/img/content/image_content_logo_small.png</field>
     </record>
 

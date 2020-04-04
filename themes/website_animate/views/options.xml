@@ -24,72 +24,72 @@
             <div data-js="o_animate"
                 t-att-data-selector="o_animate_selector"
                 data-exclude=".o_not-animable">
-                <div class="dropdown-submenu o_anim_li">
-                    <a href="#" class="dropdown-item"><i class="fa fa-bolt"/>Animate</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item" data-select-class="">Disable animation</a>
-                        <div class="dropdown-divider"/>
-                        <div class="dropdown-submenu o_anim_entrance-fading_li">
-                            <a href="#" class="dropdown-item">Fading</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_fade_in">Fade In</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_fade_in_down">Fade In-Down</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_fade_in_left">Fade In-Left</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_fade_in_right">Fade In-Right</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_fade_in_up">Fade In-Up</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu o_anim_entrance-bounce_li">
-                            <a href="#" class="dropdown-item">Bouncing</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_bounce_in">Bounce In</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_bounce_in_down">Bounce In-Down</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_bounce_in_left">Bounce In-Left</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_bounce_in_right">Bounce In-Right</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu o_anim_entrance-rotate_li">
-                            <a href="#" class="dropdown-item">Rotating</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_rotate_in">Rotate In</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_rotate_in_down_left">Rotate In-Down-Left</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_rotate_in_down_right">Rotate In-Down-Right</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu o_anim_entrance-rotate_li">
-                            <a href="#" class="dropdown-item">Zoom</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_zoom_in">Zoom In</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_zoom_in_down">Zoom In-Down</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_zoom_in_left">Zoom In-Left</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_zoom_in_right">Zoom In-Right</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu o_anim_effects-attention_li">
-                            <a href="#" class="dropdown-item">Attention Seekers</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_flash">Flash</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_pulse">Pulse</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_shake">Shake</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_tada">Tada</a>
-                            </div>
-                        </div>
-                        <div class="dropdown-submenu o_anim_effects-flippers_li">
-                            <a href="#" class="dropdown-item">Flippers</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_flip_in_x">Flip-In-X</a>
-                                <a href="#" class="dropdown-item" data-select-class="o_anim_flip_in_y">Flip-In-Y</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <we-collapse-area class="o_anim_li">
+                    <we-toggler><i class="fa fa-fw fa-bolt"/> Animate</we-toggler>
+                    <we-collapse>
+                        <we-button data-select-class="">Disable animation</we-button>
+                        <we-divider/>
+                        <we-collapse-area class="o_anim_entrance-fading_li">
+                            <we-toggler>Fading</we-toggler>
+                            <we-collapse>
+                                <we-button data-select-class="o_anim_fade_in">Fade In</we-button>
+                                <we-button data-select-class="o_anim_fade_in_down">Fade In-Down</we-button>
+                                <we-button data-select-class="o_anim_fade_in_left">Fade In-Left</we-button>
+                                <we-button data-select-class="o_anim_fade_in_right">Fade In-Right</we-button>
+                                <we-button data-select-class="o_anim_fade_in_up">Fade In-Up</we-button>
+                            </we-collapse>
+                        </we-collapse-area>
+                        <we-collapse-area class="o_anim_entrance-bounce_li">
+                            <we-toggler>Bouncing</we-toggler>
+                            <we-collapse>
+                                <we-button data-select-class="o_anim_bounce_in">Bounce In</we-button>
+                                <we-button data-select-class="o_anim_bounce_in_down">Bounce In-Down</we-button>
+                                <we-button data-select-class="o_anim_bounce_in_left">Bounce In-Left</we-button>
+                                <we-button data-select-class="o_anim_bounce_in_right">Bounce In-Right</we-button>
+                            </we-collapse>
+                        </we-collapse-area>
+                        <we-collapse-area class="o_anim_entrance-rotate_li">
+                            <we-toggler>Rotating</we-toggler>
+                            <we-collapse>
+                                <we-button data-select-class="o_anim_rotate_in">Rotate In</we-button>
+                                <we-button data-select-class="o_anim_rotate_in_down_left">Rotate In-Down-Left</we-button>
+                                <we-button data-select-class="o_anim_rotate_in_down_right">Rotate In-Down-Right</we-button>
+                            </we-collapse>
+                        </we-collapse-area>
+                        <we-collapse-area class="o_anim_effects-rotate_li">
+                            <we-toggler>Zoom</we-toggler>
+                            <we-collapse>
+                                <we-button data-select-class="o_anim_zoom_in">Zoom In</we-button>
+                                <we-button data-select-class="o_anim_zoom_in_down">Zoom In-Down</we-button>
+                                <we-button data-select-class="o_anim_zoom_in_left">Zoom In-Left</we-button>
+                                <we-button data-select-class="o_anim_zoom_in_right">Zoom In-Right</we-button>
+                            </we-collapse>
+                        </we-collapse-area>
+                        <we-collapse-area class="o_anim_effects-attention_li">
+                            <we-toggler>Attention Seekers</we-toggler>
+                            <we-collapse>
+                                <we-button data-select-class="o_anim_flash">Flash</we-button>
+                                <we-button data-select-class="o_anim_pulse">Pulse</we-button>
+                                <we-button data-select-class="o_anim_shake">Shake</we-button>
+                                <we-button data-select-class="o_anim_tada">Tada</we-button>
+                            </we-collapse>
+                        </we-collapse-area>
+                        <we-collapse-area class="o_anim_effects-flippers_li">
+                            <we-toggler>Flippers</we-toggler>
+                            <we-collapse>
+                                <we-button data-select-class="o_anim_flip_in_x">Flip-In-X</we-button>
+                                <we-button data-select-class="o_anim_flip_in_y">Flip-In-Y</we-button>
+                            </we-collapse>
+                        </we-collapse-area>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
             <div data-js="o_animate_duration"
                 t-att-data-selector="o_animate_selector"
                 data-exclude=".o_not-animable">
-                <div class="dropdown-submenu d-none"> <!-- Visible only if an animation is active (js) -->
-                    <a href="#" class="dropdown-item"><i class="fa fa-hourglass-half"/>Animation Duration</a>
-                    <div class="dropdown-menu o_anim_ul_timing">
+                <we-collapse-area class="d-none"> <!-- Visible only if an animation is active (js) -->
+                    <we-toggler><i class="fa fa-fw fa-hourglass-half"/> Animation Duration</we-toggler>
+                    <we-collapse class="o_anim_ul_timing">
                         <span class="timeline duration">
                             <span>
                                 <span simulate="delay"/>
@@ -98,21 +98,21 @@
                                 <span simulate="duration"/>
                             </span>
                         </span>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_dur500">500ms</a>
-                        <a href="#" class="dropdown-item" data-select-class="">1000ms (default)</a>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_dur1500">1500ms</a>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_dur2000">2000ms</a>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_dur2500">2500ms</a>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_dur3000">3000ms</a>
-                    </div>
-                </div>
+                        <we-button data-select-class="o_anim_dur500">500ms</we-button>
+                        <we-button data-select-class="">1000ms (default)</we-button>
+                        <we-button data-select-class="o_anim_dur1500">1500ms</we-button>
+                        <we-button data-select-class="o_anim_dur2000">2000ms</we-button>
+                        <we-button data-select-class="o_anim_dur2500">2500ms</we-button>
+                        <we-button data-select-class="o_anim_dur3000">3000ms</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
             <div data-js="o_animate_delay"
                 t-att-data-selector="o_animate_selector"
                 data-exclude=".o_not-animable">
-                <div class="dropdown-submenu d-none"> <!-- Visible only if an animation is active (js) -->
-                    <a href="#" class="dropdown-item"><i class="fa fa-clock-o"/>Animation Delay</a>
-                    <div class="dropdown-menu o_anim_ul_timing">
+                <we-collapse-area class="d-none"> <!-- Visible only if an animation is active (js) -->
+                    <we-toggler><i class="fa fa-fw fa-clock-o"/> Animation Delay</we-toggler>
+                    <we-collapse class="o_anim_ul_timing">
                         <span class="timeline delay">
                             <span>
                                 <span simulate="delay"/>
@@ -121,24 +121,24 @@
                                 <span simulate="duration"/>
                             </span>
                         </span>
-                        <a href="#" class="dropdown-item" data-select-class="">No delay (default)</a>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_del500">500ms</a>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_del1000">1000ms</a>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_del1500">1500ms</a>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_del2000">2000ms</a>
-                        <a href="#" class="dropdown-item" data-select-class="o_anim_del2500">2500ms</a>
-                    </div>
-                </div>
+                        <we-button data-select-class="">No delay (default)</we-button>
+                        <we-button data-select-class="o_anim_del500">500ms</we-button>
+                        <we-button data-select-class="o_anim_del1000">1000ms</we-button>
+                        <we-button data-select-class="o_anim_del1500">1500ms</we-button>
+                        <we-button data-select-class="o_anim_del2000">2000ms</we-button>
+                        <we-button data-select-class="o_anim_del2500">2500ms</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
             <div data-js="o_animate_options"
                 t-att-data-selector="o_animate_selector"
                 data-exclude=".o_not-animable">
-                <div class="dropdown-submenu d-none"> <!-- Visible only if an animation is active (js) -->
-                    <a href="#" class="dropdown-item"><i class="fa fa-cogs"/>Animation Options</a>
-                    <div class="dropdown-menu o_anim_ul_options">
-                        <a href="#" class="dropdown-item" data-toggle-class="o_animate_both_scroll">Each time it becomes visible</a>
-                    </div>
-                </div>
+                <we-collapse-area class="d-none"> <!-- Visible only if an animation is active (js) -->
+                    <we-toggler><i class="fa fa-fw fa-cogs"/> Animation Options</we-toggler>
+                    <we-collapse class="o_anim_ul_options">
+                        <we-button data-toggle-class="o_animate_both_scroll">Each time it becomes visible</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
     </template>

@@ -7,10 +7,11 @@ $o-animate-timeline-duration-color: #21b799;
 $o-animate-timeline-delay-color: #A4498C;
 
 // default style
-#oe_manipulators {
+.o_we_customize_panel {
     .o_anim_li  > a > i {
         color: orange!important;
     }
+
     span.timeline {
         display: block;
         width: 100%;

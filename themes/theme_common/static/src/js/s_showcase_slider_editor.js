@@ -13,8 +13,8 @@ odoo.define('theme_common.s_showcase_slider_editor.js', function (require) {
             }).bind(this));
 
             _.delay((function () { // FIXME ...
-                this.$overlay.find(".js_s_ss_addSlide").on('click', this.addSlide.bind(this));
-                this.$overlay.find(".js_s_ss_removeSlide").on('click', this.removeSlide.bind(this));
+                this.$overlay.data('$optionsSection').find(".js_s_ss_addSlide").on('click', this.addSlide.bind(this));
+                this.$overlay.data('$optionsSection').find(".js_s_ss_removeSlide").on('click', this.removeSlide.bind(this));
             }).bind(this), 100);
         },
 

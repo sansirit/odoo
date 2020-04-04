@@ -55,13 +55,13 @@
         </xpath>
         <xpath expr="//div[@data-js='background']" position="before">
             <div data-selector=".s_masonry_block">
-                <div class="dropdown-submenu">
-                    <a tabindex="-1" href="#" class="dropdown-item"><i class="fa fa-expand"/>Inner Spacing</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item" data-select-class="">Normal</a>
-                        <a href="#" class="dropdown-item" data-select-class="s_ratio_2_1">Bigger</a>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-expand"/> Inner Spacing</we-toggler>
+                    <we-collapse>
+                        <we-button data-select-class="">Normal</we-button>
+                        <we-button data-select-class="s_ratio_2_1">Bigger</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
     </template>

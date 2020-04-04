@@ -77,10 +77,10 @@
                 data-selector=".s_team_profiles [class*='col-lg-']"
                 data-target=".card"
                 data-palette-title="Box Color">
-                <div class="dropdown-submenu">
-                    <a tabindex="-1" href="#" class="dropdown-item"><i class="fa fa-eyedropper"/>Color</a>
-                    <div class="dropdown-menu" role="menu"/>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-eyedropper"/> Color</we-toggler>
+                    <we-collapse/>
+                </we-collapse-area>
             </div>
         </xpath>
     </template>

@@ -10,13 +10,13 @@
                  data-drop-in='.row.simple-stepwizard-row'/>
 
             <div data-js="scroll_nav" data-selector="section">
-                <div class="dropdown-submenu">
-                    <a tabindex="-1" href="#" class="dropdown-item"><i class="fa fa-mouse-pointer" />Scroll Nav</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item" data-select-class="o_scroll_nav">Enabled</a>
-                        <a href="#" class="dropdown-item" data-select-class="">Disabled</a>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-mouse-pointer"/> Scroll Nav</we-toggler>
+                    <we-collapse>
+                        <we-button data-select-class="o_scroll_nav">Enabled</we-button>
+                        <we-button data-select-class="">Disabled</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
 
             <div data-selector=".s_text_highlight"

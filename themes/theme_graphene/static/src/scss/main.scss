@@ -518,6 +518,27 @@ div#website-top-navbar *:not(.fa) {
 // Google Map
 // =============================
 
+.dropdown-menu.backgrounds {
+    width: 260px;
+
+    a.thumb {
+        margin: 2px 7px 6px;
+        float: left;
+        clear: none;
+        width: 44%;
+
+        height: 50px;
+        background-size: cover;
+        outline: 1px solid #626262;
+        opacity: .8;
+        &:hover {opacity: 1}
+        &.active {
+            opacity: 1;
+            outline: 2px solid theme-color('success');
+        }
+    }
+}
+
 @include o-theme-sri-bg-img-thumb-classes((
     'stdMap': 'map-default.jpg', 'lightMonoMap': 'map-lightMono.jpg', 'cupertinoMap': 'map-cupertino.jpg',
     'retroMap': 'map-retro.jpg', 'cobaltMap': 'map-cobalt.jpg', 'flatMap': 'map-flat.jpg', 'blueMap': 'map-blue.jpg',
@@ -526,3 +547,11 @@ div#website-top-navbar *:not(.fa) {
 
 /* Ecommerce */
 @include o-theme-sri-ecommerce-classes();
+
+// TODO remove me in master
+button.o_small {
+    &[data-color*="alpha"], &[data-color*="beta"], &[data-color*="gamma"],
+    &[data-color*="delta"], &[data-color*="epsilon"] {
+        border-radius: 0 !important;
+    }
+}

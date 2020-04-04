@@ -63,7 +63,7 @@ sOptions.registry.o_animate = sOptions.Class.extend({
      */
     _setActive: function () {
         this._super.apply(this, arguments);
-        this.$overlay.find('.snippet-option-o_animate_duration, .snippet-option-o_animate_delay, .snippet-option-o_animate_options')
+        this.$overlay.data('$optionsSection').find('.snippet-option-o_animate_duration, .snippet-option-o_animate_delay, .snippet-option-o_animate_options')
                      .toggleClass('d-none', this.$el.find('.active').length === 0);
     },
 });
@@ -82,8 +82,8 @@ var Common = sOptions.Class.extend({
     selectClass: function (previewMode, value, $opt) {
         this._super.apply(this, arguments);
 
-        var $timeline_delay = this.$overlay.find('.timeline' + this.__animateOptionType + ' span[simulate="delay"]');
-        var $timeline_duration = this.$overlay.find('.timeline' + this.__animateOptionType + ' span[simulate="duration"]');
+        var $timeline_delay = this.$overlay.data('$optionsSection').find('.timeline' + this.__animateOptionType + ' span[simulate="delay"]');
+        var $timeline_duration = this.$overlay.data('$optionsSection').find('.timeline' + this.__animateOptionType + ' span[simulate="duration"]');
 
         this.$target.css({
             'animation-duration': '',

@@ -26,8 +26,8 @@
     <template id="s_showcase_slider_options" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='background']" position="before">
             <div data-js='s_showcase_slider' data-selector=".s_showcase_slider">
-                <li class="js_s_ss_addSlide"><a tabindex="-1" href="#">Add Slide</a></li>
-                <li class="js_s_ss_removeSlide"><a tabindex="-1" href="#">Remove current slide</a></li>
+                <we-button class="js_s_ss_addSlide">Add Slide</we-button>
+                <we-button class="js_s_ss_removeSlide">Remove current slide</we-button>
             </div>
         </xpath>
     </template>

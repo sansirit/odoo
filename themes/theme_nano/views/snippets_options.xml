@@ -15,15 +15,15 @@
         <!-- Styles -->
         <xpath expr="//div[@id='so_main_colorpicker']" position="after">
             <div data-selector="h1, h2, h3, h4, h5, h6">
-                <div class="dropdown-submenu">
-                    <a tabindex="-1" href="#" class="dropdown-item"><i class="fa fa-paint-brush"/>Style</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item" data-toggle-class="text-muted">Muted</a>
-                        <a href="#" class="dropdown-item" data-toggle-class="text-uppercase">Uppercase</a>
-                        <a href="#" class="dropdown-item" data-toggle-class="text-underline">Underline</a>
-                        <a href="#" class="dropdown-item" data-toggle-class="text-boxed">Boxed</a>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-paint-brush"/> Style</we-toggler>
+                    <we-collapse>
+                        <we-button data-toggle-class="text-muted">Muted</we-button>
+                        <we-button data-toggle-class="text-uppercase">Uppercase</we-button>
+                        <we-button data-toggle-class="text-underline">Underline</we-button>
+                        <we-button data-toggle-class="text-boxed">Boxed</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
 

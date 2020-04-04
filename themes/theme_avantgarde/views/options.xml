@@ -11,7 +11,6 @@
                     <a t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"/></a>
                     <a t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"/></a>
                     <a t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"/></a>
-                    <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher"><i class="fa fa-google-plus-square"/></a>
                     <a t-att-href="website.social_github" t-if="website.social_github"><i class="fa fa-github"/></a>
                     <a t-att-href="website.social_instagram" t-if="website.social_instagram"><i class="fa fa-instagram"/></a>
                     <a t-attf-href="mailto:#{res_company.email}" t-if="res_company.email"><i class="fa fa-envelope"></i></a>
@@ -42,18 +41,18 @@
             <div data-js="bg_fx"
                 data-selector="section, .s_clonable_boxes .row > div"
                 data-exclude=".parallax, .s_google_map, .s_showcase_image, .s_showcase, .s_masonry_block, .s_clonable_boxes, .s_css_slider">
-                <div class="dropdown-submenu">
-                    <a tabindex="-1" href="#" class="dropdown-item"><i class="fa fa-sliders"/>Background Effects</a>
-                    <div class="dropdown-menu">
-                        <a href="#" class="dropdown-item" data-select-class="insetShadow">Inset Shadow</a>
-                        <a href="#" class="dropdown-item" data-select-class="insetShadowBig">Big Inset Shadow</a>
-                        <a href="#" class="dropdown-item" data-select-class="glossy">Glossy</a>
-                        <a href="#" class="dropdown-item" data-select-class="glossy-medium">Glossy Medium</a>
-                        <a href="#" class="dropdown-item" data-select-class="glossy-soft">Glossy Soft</a>
-                        <div class="dropdown-divider"/>
-                        <a href="#" class="dropdown-item" data-select-class="">No effects</a>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-sliders"/> Background Effects</we-toggler>
+                    <we-collapse>
+                        <we-button data-select-class="insetShadow">Inset Shadow</we-button>
+                        <we-button data-select-class="insetShadowBig">Big Inset Shadow</we-button>
+                        <we-button data-select-class="glossy">Glossy</we-button>
+                        <we-button data-select-class="glossy-medium">Glossy Medium</we-button>
+                        <we-button data-select-class="glossy-soft">Glossy Soft</we-button>
+                        <we-divider/>
+                        <we-button data-select-class="">No effects</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
     </template>
@@ -96,15 +95,15 @@
     <template id="avantgarde_typo_pattern" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='background']" position="before">
             <div data-selector="h1, h2">
-                <div class="dropdown-submenu">
-                    <a tabindex="-1" href="#" class="dropdown-item"><i class="fa fa-header"/>Text Tranform</a>
-                    <div class="dropdown-menu toggle">
-                        <a href="#" class="dropdown-item" data-select-class="">Normal</a>
-                        <div class="dropdown-divider"/>
-                        <a href="#" class="dropdown-item" data-select-class="text-uppercase">Uppercase</a>
-                        <a href="#" class="dropdown-item" data-select-class="text-small_caps">Small Caps</a>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-header"/> Text Tranform</we-toggler>
+                    <we-collapse>
+                        <we-button data-select-class="">Normal</we-button>
+                        <we-button data-select-class="text-uppercase">Uppercase</we-button>
+                        <we-divider/>
+                        <we-button data-select-class="text-small_caps">Small Caps</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
 
             <!-- Drop Caps Option: trigger first <p> elements that dosn't contains a button.
@@ -112,19 +111,19 @@
             <div data-js="typo_style"
                 data-selector="main p, p[class*='drop-caps']"
                 data-exclude="p + p, p:has(.btn)">
-                <div class="dropdown-submenu">
-                    <a tabindex="-1" href="#" class="dropdown-item"><i class="fa fa-font"/>Font Style</a>
-                    <div class="dropdown-menu toggle">
-                        <a href="#" class="dropdown-item" data-select-class="">Normal</a>
-                        <div class="dropdown-divider"/>
-                        <a href="#" class="dropdown-item" data-select-class="drop-caps">Drop Caps</a>
-                        <a href="#" class="dropdown-item" data-select-class="drop-caps_alpha">Drop Caps Alpha</a>
-                        <a href="#" class="dropdown-item" data-select-class="drop-caps_beta">Drop Caps Beta</a>
-                        <a href="#" class="dropdown-item" data-select-class="drop-caps_gamma">Drop Caps Gamma</a>
-                        <a href="#" class="dropdown-item" data-select-class="drop-caps_delta">Drop Caps Delta</a>
-                        <a href="#" class="dropdown-item" data-select-class="drop-caps_epsilon">Drop Caps Epsilon</a>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-font"/> Font Style</we-toggler>
+                    <we-collapse>
+                        <we-button data-select-class="">Normal</we-button>
+                        <we-divider/>
+                        <we-button data-select-class="drop-caps">Drop Caps</we-button>
+                        <we-button data-select-class="drop-caps_alpha">Drop Caps Alpha</we-button>
+                        <we-button data-select-class="drop-caps_beta">Drop Caps Beta</we-button>
+                        <we-button data-select-class="drop-caps_gamma">Drop Caps Gamma</we-button>
+                        <we-button data-select-class="drop-caps_delta">Drop Caps Delta</we-button>
+                        <we-button data-select-class="drop-caps_epsilon">Drop Caps Epsilon</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
     </template>
@@ -133,21 +132,21 @@
     <template id="avantgarde_google_map" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='background']" position="before">
             <div data-js="map" data-selector="section.s_google_map">
-                <div class="dropdown-submenu">
-                    <a tabindex="-1" href="#" class="dropdown-item"><i class="fa fa-fw fa-paint-brush"/>Style</a>
-                    <div class="dropdown-menu backgrounds" data-no-preview="true">
-                        <a href="#" class="dropdown-item thumb stdMap-thumb" data-map-color="stdMap"/>
-                        <a href="#" class="dropdown-item thumb lightMonoMap-thumb" data-map-color="lightMonoMap"/>
-                        <a href="#" class="dropdown-item thumb cupertinoMap-thumb" data-map-color="cupertinoMap"/>
-                        <a href="#" class="dropdown-item thumb retroMap-thumb" data-map-color="retroMap"/>
-                        <a href="#" class="dropdown-item thumb cobaltMap-thumb" data-map-color="cobaltMap"/>
-                        <a href="#" class="dropdown-item thumb flatMap-thumb" data-map-color="flatMap"/>
-                        <a href="#" class="dropdown-item thumb blueMap-thumb" data-map-color="blueMap"/>
-                        <a href="#" class="dropdown-item thumb lillaMap-thumb" data-map-color="lillaMap"/>
-                        <a href="#" class="dropdown-item thumb carMap-thumb" data-map-color="carMap"/>
-                        <a href="#" class="dropdown-item thumb bwMap-thumb" data-map-color="bwMap"/>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-paint-brush"/> Style</we-toggler>
+                    <we-collapse data-no-preview="true">
+                        <we-button class="thumb stdMap-thumb" data-map-color="stdMap"></we-button>
+                        <we-button class="thumb lightMonoMap-thumb" data-map-color="lightMonoMap"></we-button>
+                        <we-button class="thumb cupertinoMap-thumb" data-map-color="cupertinoMap"></we-button>
+                        <we-button class="thumb retroMap-thumb" data-map-color="retroMap"></we-button>
+                        <we-button class="thumb cobaltMap-thumb" data-map-color="cobaltMap"></we-button>
+                        <we-button class="thumb flatMap-thumb" data-map-color="flatMap"></we-button>
+                        <we-button class="thumb blueMap-thumb" data-map-color="blueMap"></we-button>
+                        <we-button class="thumb lillaMap-thumb" data-map-color="lillaMap"></we-button>
+                        <we-button class="thumb carMap-thumb" data-map-color="carMap"></we-button>
+                        <we-button class="thumb bwMap-thumb" data-map-color="bwMap"></we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
     </template>
@@ -156,13 +155,13 @@
     <template id="avantgarde_top_content_options" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='background']" position="before">
             <div data-js='avantgarde_top_banner_options' data-selector=".s_parallax, .s_google_map">
-                <div class="dropdown-submenu move_to_top_options">
-                    <a tabindex="-1" href="#" class="dropdown-item"><i class="fa fa-magic"/>Position</a>
-                    <div class="dropdown-menu" data-no-preview="true">
-                        <a href="#" class="dropdown-item" data-select-class="">Normal</a>
-                        <a href="#" class="dropdown-item" data-select-class="move_to_top">Move to top</a>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-magic"/> Position</we-toggler>
+                    <we-collapse data-no-preview="true">
+                        <we-button data-select-class="">Normal</we-button>
+                        <we-button data-select-class="move_to_top">Move to top</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
     </template>

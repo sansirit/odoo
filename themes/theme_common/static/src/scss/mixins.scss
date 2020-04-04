@@ -1093,18 +1093,18 @@
 }
 
 @mixin o-theme-sri-bg-image-styles($img, $body-color: white, $shadow-color : rgba(255, 0, 0, 0), $x: 50%, $y: 50%) {
-    @include o-theme-sri-bg-styles(url("#{$o-theme-img-base-url}#{$img}"), $x, $y, $body-color, url("#{$o-theme-img-base-url}#{$o-theme-pattern-2x-prefix}#{$img}"));
+    @include o-theme-sri-bg-styles(url("/#{$o-theme-img-base-url}#{$img}"), $x, $y, $body-color, url("/#{$o-theme-img-base-url}#{$o-theme-pattern-2x-prefix}#{$img}"));
     text-shadow: 0 1px 1px transparentize($shadow-color, 0.4);
 }
 
 @mixin o-theme-sri-bg-pattern-styles($img, $body-color: white, $x: 50%, $y: 50%) {
-    @include o-theme-sri-bg-styles(url("#{$o-theme-pattern-base-url}#{$img}"), $x, $y, $body-color, url("#{$o-theme-pattern-base-url}#{$o-theme-img-2x-prefix}#{$img}"));
+    @include o-theme-sri-bg-styles(url("/#{$o-theme-pattern-base-url}#{$img}"), $x, $y, $body-color, url("/#{$o-theme-pattern-base-url}#{$o-theme-img-2x-prefix}#{$img}"));
 }
 
 @mixin o-theme-sri-bg-img-thumb-classes($backgrounds) {
     @each $name, $image in $backgrounds {
         .#{$name}-thumb {
-            background-image: url("#{$o-theme-thumb-base-url}#{$image}") !important;
+            background-image: url("/#{$o-theme-thumb-base-url}#{$image}") !important;
             background-position: center center;
             background-size: cover;
         }

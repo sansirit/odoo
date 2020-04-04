@@ -80,13 +80,13 @@
     <template id="options_s_timeline" inherit_id="website.snippet_options">
         <xpath expr="." position="inside">
             <div data-selector=".s_timeline_row" data-drop-near=".s_timeline_row">
-                <div class="dropdown-submenu">
-                    <a tabindex="-2" href="#" class="dropdown-item"><i class="fa fa-align-left"/>Position</a>
-                    <div class="dropdown-menu" role="menu">
-                        <a href="#" class="dropdown-item" data-select-class="flex-row">Left</a>
-                        <a href="#" class="dropdown-item" data-select-class="flex-row-reverse">Right</a>
-                    </div>
-                </div>
+                <we-collapse-area>
+                    <we-toggler><i class="fa fa-fw fa-align-left"/> Position</we-toggler>
+                    <we-collapse>
+                        <we-button data-select-class="flex-row">Left</we-button>
+                        <we-button data-select-class="flex-row-reverse">Right</we-button>
+                    </we-collapse>
+                </we-collapse-area>
             </div>
         </xpath>
     </template>

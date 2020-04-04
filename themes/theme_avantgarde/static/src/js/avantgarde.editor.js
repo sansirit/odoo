@@ -76,7 +76,7 @@ odoo.define('theme_avantgarde.editor', function (require) {
          * @override
          */
         onFocus: function () {
-            this.$overlay.find('.oe_snippet_clone, .oe_snippet_move')
+            this.$overlay.data('$optionsSection').find('.oe_snippet_clone, .oe_snippet_move')
                 .toggleClass('d-none', this.$target.hasClass('move_to_top'));
         },
         /**

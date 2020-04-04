@@ -10,7 +10,7 @@
         <xpath expr="//div[@id='so_main_colorpicker']" position="attributes">
             <attribute name="data-selector" separator="," add=".s_badge"/>
         </xpath>
-        <xpath expr="//div[@data-js='content']" position="attributes">
+        <xpath expr="//div[@id='so_content_addition']" position="attributes">
             <attribute name="data-selector" separator="," add=".s_badge"/>
         </xpath>
     </template>

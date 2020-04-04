@@ -9,42 +9,42 @@ odoo.define('theme_common.s_animated_boxes_editor', function (require) {
             self.add_btn_edit_slide();
             setTimeout(function () {
                 if (self.$target.find(".slide").length > 0) {
-                    self.$overlay.find(".createSlide").addClass("hide");
-                    self.$overlay.find(".deleteSlide").removeClass("hide");
-                    self.$overlay.find(".btn-showSlide").removeClass("hide");
+                    self.$overlay.data('$optionsSection').find(".createSlide").addClass("hide");
+                    self.$overlay.data('$optionsSection').find(".deleteSlide").removeClass("hide");
+                    self.$overlay.data('$optionsSection').find(".btn-showSlide").removeClass("hide");
                 } else {
-                    self.$overlay.find(".createSlide").removeClass("hide");
-                    self.$overlay.find(".deleteSlide").addClass("hide");
-                    self.$overlay.find(".btn-showSlide").addClass("hide");
+                    self.$overlay.data('$optionsSection').find(".createSlide").removeClass("hide");
+                    self.$overlay.data('$optionsSection').find(".deleteSlide").addClass("hide");
+                    self.$overlay.data('$optionsSection').find(".btn-showSlide").addClass("hide");
                 }
             }, 100);
         },
 
         add_btn_edit_slide: function () {
             var self = this;
-            self.$overlay.find(".oe_options").after('<a href="#" class="btn btn-secondary btn-showSlide" title="Lock slide" style="width: auto; padding: 0 5px;"><i class="fa fa-toggle-off"></i>  Edit Slide</a> ');
-            self.$overlay.on('click', '.btn-showSlide', _.bind(this.toggle_slide, this));
+            self.$overlay.data('$optionsSection').append('<a href="#" class="btn-showSlide" title="Lock slide" style="width: auto; padding: 0 5px;"><i class="fa fa-toggle-off"></i>  Edit Slide</a> ');
+            self.$overlay.data('$optionsSection').on('click', '.btn-showSlide', _.bind(this.toggle_slide, this));
         },
 
         create_slide: function (previewMode, value, $li) {
             var self = this,
                 slide = '<div class="slide editable bg-success animated text-center dur-200ms insetShadow" anim="o_anim_fade_in_down" del="0" dur="200"><div class="v-align"><h3>Your new slide</h3></div></div>';
             self.$target.append(slide);
-            self.$overlay.find(".btn-showSlide").removeClass("hide");
-            self.$overlay.find(".createSlide").addClass("hide");
-            self.$overlay.find(".deleteSlide").removeClass("hide");
+            self.$overlay.data('$optionsSection').find(".btn-showSlide").removeClass("hide");
+            self.$overlay.data('$optionsSection').find(".createSlide").addClass("hide");
+            self.$overlay.data('$optionsSection').find(".deleteSlide").removeClass("hide");
         },
 
         delete_slide: function (previewMode, value, $li) {
             var self = this;
             self.$target.find(".slide").remove();
-            self.$overlay.find(".btn-showSlide").addClass("hide");
-            self.$overlay.find(".createSlide").removeClass("hide");
-            self.$overlay.find(".deleteSlide").addClass("hide");
+            self.$overlay.data('$optionsSection').find(".btn-showSlide").addClass("hide");
+            self.$overlay.data('$optionsSection').find(".createSlide").removeClass("hide");
+            self.$overlay.data('$optionsSection').find(".deleteSlide").addClass("hide");
         },
 
         toggle_slide: function () {
-            var a = this.$overlay.find(".btn-showSlide"),
+            var a = this.$overlay.data('$optionsSection').find(".btn-showSlide"),
                 i = a.find("i"),
                 t = this.$target,
                 s = t.find(".slide");
