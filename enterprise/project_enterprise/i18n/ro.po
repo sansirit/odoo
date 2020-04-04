@@ -1,0 +1,85 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * project_enterprise
+# 
+# Translators:
+# Martin Trigaux, 2019
+# Dorin Hongu <dhongu@gmail.com>, 2019
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~12.2+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-20 14:08+0000\n"
+"PO-Revision-Date: 2019-03-20 14:43+0000\n"
+"Last-Translator: Dorin Hongu <dhongu@gmail.com>, 2019\n"
+"Language-Team: Romanian (https://www.transifex.com/odoo/teams/41243/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#. module: project_enterprise
+#: model_terms:ir.ui.view,arch_db:project_enterprise.project_view_kanban_inherit
+msgid "<span class=\"o_label\">Planning</span>"
+msgstr ""
+
+#. module: project_enterprise
+#: model:ir.model.fields,field_description:project_enterprise.field_project_project__allow_planning
+#: model:ir.model.fields,field_description:project_enterprise.field_project_task__allow_planning
+msgid "Allow Planning"
+msgstr ""
+
+#. module: project_enterprise
+#: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_search_planning
+msgid "Assigned To"
+msgstr "Atribuit către"
+
+#. module: project_enterprise
+#: model:ir.model.fields,field_description:project_enterprise.field_project_task__planned_date_end
+msgid "End date"
+msgstr "Dată sfârșit"
+
+#. module: project_enterprise
+#: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_search_planning
+msgid "Group By"
+msgstr "Grupează după"
+
+#. module: project_enterprise
+#: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_search_planning
+msgid "My Project"
+msgstr "Proiectul meu"
+
+#. module: project_enterprise
+#: model:ir.actions.act_window,name:project_enterprise.project_task_action_planning
+#: model:ir.actions.act_window,name:project_enterprise.project_task_action_planning_by_project
+#: model:ir.ui.menu,name:project_enterprise.project_task_menu_planning
+msgid "Planning"
+msgstr "Planificare"
+
+#. module: project_enterprise
+#: model:ir.model,name:project_enterprise.model_project_project
+#: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_search_planning
+msgid "Project"
+msgstr "Proiect"
+
+#. module: project_enterprise
+#: model:ir.model.fields,field_description:project_enterprise.field_project_task__planned_date_begin
+msgid "Start date"
+msgstr "Dată început"
+
+#. module: project_enterprise
+#: model:ir.model,name:project_enterprise.model_project_task
+msgid "Task"
+msgstr "Sarcină"
+
+#. module: project_enterprise
+#: model:ir.ui.menu,name:project_enterprise.project_task_menu
+msgid "Tasks"
+msgstr "Sarcini"
+
+#. module: project_enterprise
+#: model_terms:ir.ui.view,arch_db:project_enterprise.res_config_settings_view_form
+msgid "Timesheets"
+msgstr "Fișe de pontaj"

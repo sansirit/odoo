@@ -1,0 +1,9 @@
+.terminal_ticket {
+    line-height: 100%;
+    font-size: 10px;
+}
+.ticket_cut {
+    height: 1px;
+    border: none;
+    background: lightgray;
+}

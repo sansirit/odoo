@@ -1,0 +1,15 @@
+.o_mobile_sticky {
+    @include o-position-sticky();
+    z-index: 2;
+}
+
+.o_barcode_mobile {
+    -webkit-mask: url('/web_mobile/static/src/img/barcode.svg') no-repeat 100% 100%;
+    mask: url('/web_mobile/static/src/img/barcode.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    background-color: $o-enterprise-primary-color;
+    width: 26px;
+    margin-left: 10px;
+    border: 0;
+}
