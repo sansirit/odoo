@@ -233,14 +233,14 @@
 <t t-extend="res_config_edition">
     <t t-jquery=".user-heading h3" t-operation="replace">
         <h3>
-            Odoo <t t-esc="widget.server_version"/> (Enterprise Edition)
+            Odoo <t t-esc="widget.server_version"/> <!-- (Enterprise Edition) -->
         </h3>
     </t>
     <t t-jquery=".user-heading h3" t-operation="after">
-        <t t-set="expiration_date" t-value="widget.expiration_date ? moment(widget.expiration_date).format('LL') : null"/>
-        <t t-if="expiration_date">
-            <h5>Database expiration: <t t-esc="expiration_date"/></h5>
-        </t>
+<!--        <t t-set="expiration_date" t-value="widget.expiration_date ? moment(widget.expiration_date).format('LL') : null"/>-->
+<!--        <t t-if="expiration_date">-->
+<!--            <h5>Database expiration: <t t-esc="expiration_date"/></h5>-->
+<!--        </t>-->
     </t>
 </t>
 

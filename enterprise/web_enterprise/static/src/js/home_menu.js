@@ -42,8 +42,8 @@ var HomeMenu = Widget.extend({
     on_attach_callback: function () {
         core.bus.on("keydown", this, this._onKeydown);
         this._state = this._getInitialState();
-        this.$input.val('');
-        this._render();
+//        this.$input.val('');
+//        this._render();
     },
     /**
      * @override
@@ -375,20 +375,20 @@ var QWeb = core.qweb;
 
 HomeMenu.include({
     events: _.extend(HomeMenu.prototype.events, {
-        'click .oe_instance_buy': '_onEnterpriseBuy',
-        'click .oe_instance_renew': '_onEnterpriseRenew',
-        'click .oe_instance_upsell': '_onEnterpriseUpsell',
-        'click a.oe_instance_register_show': '_onEnterpriseRegisterShow',
-        'click #confirm_enterprise_code': '_onEnterpriseCodeSubmit',
-        'click .oe_instance_hide_panel': '_onEnterpriseHidePanel',
-        'click .check_enterprise_status': '_onEnterpriseCheckStatus',
-        'click .oe_contract_send_mail': '_onEnterpriseSendUnlinkEmail',
+//        'click .oe_instance_buy': '_onEnterpriseBuy',
+//        'click .oe_instance_renew': '_onEnterpriseRenew',
+//        'click .oe_instance_upsell': '_onEnterpriseUpsell',
+//        'click a.oe_instance_register_show': '_onEnterpriseRegisterShow',
+//        'click #confirm_enterprise_code': '_onEnterpriseCodeSubmit',
+//        'click .oe_instance_hide_panel': '_onEnterpriseHidePanel',
+//        'click .check_enterprise_status': '_onEnterpriseCheckStatus',
+//        'click .oe_contract_send_mail': '_onEnterpriseSendUnlinkEmail',
     }),
     /**
      * @override
      */
     start: function () {
-        return this._super.apply(this, arguments).then(this._enterpriseExpirationCheck.bind(this));
+//        return this._super.apply(this, arguments).then(this._enterpriseExpirationCheck.bind(this));
     },
 
     //--------------------------------------------------------------------------
@@ -401,22 +401,22 @@ HomeMenu.include({
      * @private
      */
     _enterpriseExpirationCheck: function () {
-        var self = this;
-
-        // don't show the expiration warning for portal users
-        if (!(session.warning))  {
-            return;
-        }
-        var today = new moment();
-        // if no date found, assume 1 month and hope for the best
-        var dbexpirationDate = new moment(session.expiration_date || new moment().add(30, 'd'));
-        var duration = moment.duration(dbexpirationDate.diff(today));
-        var options = {
-            'diffDays': Math.round(duration.asDays()),
-            'dbexpiration_reason': session.expiration_reason,
-            'warning': session.warning,
-        };
-        self._enterpriseShowPanel(options);
+//        var self = this;
+//
+//        // don't show the expiration warning for portal users
+//        if (!(session.warning))  {
+//            return;
+//        }
+//        var today = new moment();
+//        // if no date found, assume 1 month and hope for the best
+//        var dbexpirationDate = new moment(session.expiration_date || new moment().add(30, 'd'));
+//        var duration = moment.duration(dbexpirationDate.diff(today));
+//        var options = {
+//            'diffDays': Math.round(duration.asDays()),
+//            'dbexpiration_reason': session.expiration_reason,
+//            'warning': session.warning,
+//        };
+//        self._enterpriseShowPanel(options);
     },
     /**
      * Show expiration panel 30 days before the expiry
@@ -428,33 +428,33 @@ HomeMenu.include({
      * @param {'admin'|'user'} options.warning Type of logged-in accounts addressed by message
      */
     _enterpriseShowPanel: function (options) {
-        var self = this;
-        var hideCookie = utils.get_cookie('oe_instance_hide_panel');
-        if ((options.diffDays <= 30 && !hideCookie) || options.diffDays <= 0) {
-
-            var expirationPanel = $(QWeb.render('WebClient.database_expiration_panel', {
-                has_mail: _.includes(session.module_list, 'mail'),
-                diffDays: options.diffDays,
-                dbexpiration_reason:options.dbexpiration_reason,
-                warning: options.warning
-            })).insertBefore(self.$menuSearch);
-
-            if (options.diffDays <= 0) {
-                expirationPanel.children().addClass('alert-danger');
-                expirationPanel.find('.oe_instance_buy')
-                               .on('click.widget_events', self.proxy('_onEnterpriseBuy'));
-                expirationPanel.find('.oe_instance_renew')
-                               .on('click.widget_events', self.proxy('_onEnterpriseRenew'));
-                expirationPanel.find('.oe_instance_upsell')
-                               .on('click.widget_events', self.proxy('_onEnterpriseUpsell'));
-                expirationPanel.find('.check_enterprise_status')
-                               .on('click.widget_events', self.proxy('_onEnterpriseCheckStatus'));
-                expirationPanel.find('.oe_instance_hide_panel').hide();
-                $.blockUI({message: expirationPanel.find('.database_expiration_panel')[0],
-                           css: { cursor : 'auto' },
-                           overlayCSS: { cursor : 'auto' } });
-            }
-        }
+//        var self = this;
+//        var hideCookie = utils.get_cookie('oe_instance_hide_panel');
+//        if ((options.diffDays <= 30 && !hideCookie) || options.diffDays <= 0) {
+//
+//            var expirationPanel = $(QWeb.render('WebClient.database_expiration_panel', {
+//                has_mail: _.includes(session.module_list, 'mail'),
+//                diffDays: options.diffDays,
+//                dbexpiration_reason:options.dbexpiration_reason,
+//                warning: options.warning
+//            })).insertBefore(self.$menuSearch);
+//
+//            if (options.diffDays <= 0) {
+//                expirationPanel.children().addClass('alert-danger');
+//                expirationPanel.find('.oe_instance_buy')
+//                               .on('click.widget_events', self.proxy('_onEnterpriseBuy'));
+//                expirationPanel.find('.oe_instance_renew')
+//                               .on('click.widget_events', self.proxy('_onEnterpriseRenew'));
+//                expirationPanel.find('.oe_instance_upsell')
+//                               .on('click.widget_events', self.proxy('_onEnterpriseUpsell'));
+//                expirationPanel.find('.check_enterprise_status')
+//                               .on('click.widget_events', self.proxy('_onEnterpriseCheckStatus'));
+//                expirationPanel.find('.oe_instance_hide_panel').hide();
+//                $.blockUI({message: expirationPanel.find('.database_expiration_panel')[0],
+//                           css: { cursor : 'auto' },
+//                           overlayCSS: { cursor : 'auto' } });
+//            }
+//        }
     },
 
     //--------------------------------------------------------------------------
@@ -465,84 +465,84 @@ HomeMenu.include({
      * @private
      */
     _onEnterpriseBuy: function () {
-        var limitDate = new moment().subtract(15, 'days').format("YYYY-MM-DD");
-        this._rpc({
-                model: 'res.users',
-                method: 'search_count',
-                args: [[["share", "=", false],["login_date", ">=", limitDate]]],
-            })
-            .then(function (users) {
-                window.location =
-                    $.param.querystring("https://www.odoo.com/odoo-enterprise/upgrade", {num_users: users});
-            });
+//        var limitDate = new moment().subtract(15000, 'days').format("YYYY-MM-DD");
+//        this._rpc({
+//                model: 'res.users',
+//                method: 'search_count',
+//                args: [[["share", "=", false],["login_date", ">=", limitDate]]],
+//            })
+//            .then(function (users) {
+//                window.location =
+//                    $.param.querystring("https://www.odoo.com/odoo-enterprise/upgrade", {num_users: users});
+//            });
     },
     /**
      * @private
      * @param {MouseEvent} ev
      */
     _onEnterpriseCheckStatus: function (ev) {
-        ev.preventDefault();
-        var self = this;
-        this._rpc({
-                model: 'ir.config_parameter',
-                method: 'get_param',
-                args: ['database.expiration_date'],
-            })
-            .then(function (oldDate) {
-                var dbexpirationDate = new moment(oldDate);
-                var duration = moment.duration(dbexpirationDate.diff(new moment()));
-                if (Math.round(duration.asDays()) < 30) {
-                    self._rpc({
-                            model: 'publisher_warranty.contract',
-                            method: 'update_notification',
-                            args: [[]],
-                        })
-                        .then(function () {
-                            self._rpc({
-                                    model: 'ir.config_parameter',
-                                    method: 'get_param',
-                                    args: ['database.expiration_date']
-                                })
-                                .then(function (dbexpiration_date) {
-                                    $('.oe_instance_register').hide();
-                                    $('.database_expiration_panel .alert')
-                                            .removeClass('alert-info alert-warning alert-danger');
-                                    if (dbexpirationDate !== oldDate && new moment(dbexpirationDate) > new moment()) {
-                                        $.unblockUI();
-                                        $('.oe_instance_hide_panel').show();
-                                        $('.database_expiration_panel .alert').addClass('alert-success');
-                                        $('.valid_date').html(moment(dbexpirationDate).format('LL'));
-                                        $('.oe_subscription_updated').show();
-                                    } else {
-                                        window.location.reload();
-                                    }
-                                });
-                        });
-                }
-            });
+//        ev.preventDefault();
+//        var self = this;
+//        this._rpc({
+//                model: 'ir.config_parameter',
+//                method: 'get_param',
+//                args: ['database.expiration_date'],
+//            })
+//            .then(function (oldDate) {
+//                var dbexpirationDate = new moment(oldDate);
+//                var duration = moment.duration(dbexpirationDate.diff(new moment()));
+//                if (Math.round(duration.asDays()) < 30) {
+//                    self._rpc({
+//                            model: 'publisher_warranty.contract',
+//                            method: 'update_notification',
+//                            args: [[]],
+//                        })
+//                        .then(function () {
+//                            self._rpc({
+//                                    model: 'ir.config_parameter',
+//                                    method: 'get_param',
+//                                    args: ['database.expiration_date']
+//                                })
+//                                .then(function (dbexpiration_date) {
+//                                    $('.oe_instance_register').hide();
+//                                    $('.database_expiration_panel .alert')
+//                                            .removeClass('alert-info alert-warning alert-danger');
+//                                    if (dbexpirationDate !== oldDate && new moment(dbexpirationDate) > new moment()) {
+//                                        $.unblockUI();
+//                                        $('.oe_instance_hide_panel').show();
+//                                        $('.database_expiration_panel .alert').addClass('alert-success');
+//                                        $('.valid_date').html(moment(dbexpirationDate).format('LL'));
+//                                        $('.oe_subscription_updated').show();
+//                                    } else {
+//                                        window.location.reload();
+//                                    }
+//                                });
+//                        });
+//                }
+//            });
     },
     _onEnterpriseSendUnlinkEmail: function(ev) {
-        ev.preventDefault();
-        this._rpc({
-            model: 'ir.config_parameter',
-            method: 'get_param',
-            args: ['database.already_linked_send_mail_url']
-        })
-        .then(function(unlink_mail_send_url) {
-            $('.oe_contract_sending_mail').show();
-            $('.oe_contract_sending_mail_success, .oe_contract_sending_mail_fail').hide();
-            ajax.jsonRpc(unlink_mail_send_url, 'call', {}).then(function (result) {
-                if(result.result) {
-                    $('.oe_contract_sending_mail').hide();
-                    $('.oe_contract_sending_mail_success').show();
-                }
-                else {
-                    $('.oe_contract_sending_mail').hide();
-                    $('.oe_contract_sending_mail_fail_reason').text(result.reason);
-                    $('.oe_contract_sending_mail_fail').show();
-                }
-            });
-        });
+//        ev.preventDefault();
+//        this._rpc({
+//            model: 'ir.config_parameter',
+//            method: 'get_param',
+//            args: ['database.already_linked_send_mail_url']
+//        })
+//        .then(function(unlink_mail_send_url) {
+//            $('.oe_contract_sending_mail').show();
+//            $('.oe_contract_sending_mail_success, .oe_contract_sending_mail_fail').hide();
+//            ajax.jsonRpc(unlink_mail_send_url, 'call', {}).then(function (result) {
+//                if(result.result) {
+//                    $('.oe_contract_sending_mail').hide();
+//                    $('.oe_contract_sending_mail_success').show();
+//                }
+//                else {
+//                    $('.oe_contract_sending_mail').hide();
+//                    $('.oe_contract_sending_mail_fail_reason').text(result.reason);
+//                    $('.oe_contract_sending_mail_fail').show();
+//                }
+//            });
+//        });
     },
     /**
      * Save the registration code then triggers a ping to submit it
@@ -551,92 +551,92 @@ HomeMenu.include({
      * @param {MouseEvent} ev
      */
     _onEnterpriseCodeSubmit: function (ev) {
-        ev.preventDefault();
-        var self = this;
-        var enterpriseCode = $('.database_expiration_panel').find('#enterprise_code').val();
-        if (!enterpriseCode) {
-            var $c = $('#enterprise_code');
-            $c.attr('placeholder', $c.attr('title')); // raise attention to input
-            return;
-        }
-        Promise.all(
-            [this._rpc({
-                    model: 'ir.config_parameter',
-                    method: 'get_param',
-                    args: ['database.expiration_date']
-                }),
-            this._rpc({
-                    model: 'ir.config_parameter',
-                    method: 'set_param',
-                    args: ['database.enterprise_code', enterpriseCode]
-                })]
-        ).then(function (results) {
-            var oldDate = results[0];
-            utils.set_cookie('oe_instance_hide_panel', '', -1);
-            self._rpc({
-                    model: 'publisher_warranty.contract',
-                    method: 'update_notification',
-                    args: [[]],
-                })
-                .then(function () {
-                    $.unblockUI();
-                    Promise.all(
-                        [self._rpc({
-                                model: 'ir.config_parameter',
-                                method: 'get_param',
-                                args: ['database.expiration_date']
-                            }),
-                        self._rpc({
-                                model: 'ir.config_parameter',
-                                method: 'get_param',
-                                args: ['database.expiration_reason']
-                            }),
-                        self._rpc({
-                                model: 'ir.config_parameter',
-                                method: 'get_param',
-                                args: ['database.already_linked_subscription_url']
-                            }),
-                        self._rpc({
-                                model: 'ir.config_parameter',
-                                method: 'get_param',
-                                args: ['database.already_linked_email']
-                            })]
-                    ).then(function (results) {
-                        var dbexpirationDate = results[0];
-                        var dbalready_linked_subscription_url = results[2];
-                        var dbalready_linked_email = results[3];
-                        $('.oe_instance_register').hide();
-                        $('.oe_contract_email_block').hide();
-                        $('.oe_contract_no_email_block').hide();
-                        $('.database_expiration_panel .alert')
-                                .removeClass('alert-info alert-warning alert-danger');
-                        if (dbexpirationDate !== oldDate && !dbalready_linked_subscription_url) {
-                            $('.oe_instance_hide_panel').show();
-                            $('.database_expiration_panel .alert').addClass('alert-success');
-                            $('.valid_date').html(moment(dbexpirationDate).format('LL'));
-                            $('.oe_instance_success').show();
-                        } else if (dbalready_linked_subscription_url) {
-                            $('.database_expiration_panel .alert').addClass('alert-danger');
-                            $('.oe_database_already_linked, .oe_instance_register_form').show();
-                            $('.oe_contract_sending_mail, .oe_contract_sending_mail_success, .oe_contract_sending_mail_fail').hide();
-                            $('.oe_contract_link')
-                                .attr('href', dbalready_linked_subscription_url)
-                                .text(dbalready_linked_subscription_url);
-                            if (dbalready_linked_email.length > 0) {
-                                $('.oe_contract_email_block').show();
-                                $('.oe_contract_email').text(dbalready_linked_email);
-                            } else {
-                                $('.oe_contract_no_email_block').show();
-                            }
-                            $('#confirm_enterprise_code').html('Retry');
-                        } else {
-                            $('.database_expiration_panel .alert').addClass('alert-danger');
-                            $('.oe_instance_error, .oe_instance_register_form').show();
-                            $('#confirm_enterprise_code').html('Retry');
-                        }
-                    });
-                });
-        });
+//        ev.preventDefault();
+//        var self = this;
+//        var enterpriseCode = $('.database_expiration_panel').find('#enterprise_code').val();
+//        if (!enterpriseCode) {
+//            var $c = $('#enterprise_code');
+//            $c.attr('placeholder', $c.attr('title')); // raise attention to input
+//            return;
+//        }
+//        Promise.all(
+//            [this._rpc({
+//                    model: 'ir.config_parameter',
+//                    method: 'get_param',
+//                    args: ['database.expiration_date']
+//                }),
+//            this._rpc({
+//                    model: 'ir.config_parameter',
+//                    method: 'set_param',
+//                    args: ['database.enterprise_code', enterpriseCode]
+//                })]
+//        ).then(function (results) {
+//            var oldDate = results[0];
+//            utils.set_cookie('oe_instance_hide_panel', '', -1);
+//            self._rpc({
+//                    model: 'publisher_warranty.contract',
+//                    method: 'update_notification',
+//                    args: [[]],
+//                })
+//                .then(function () {
+//                    $.unblockUI();
+//                    Promise.all(
+//                        [self._rpc({
+//                                model: 'ir.config_parameter',
+//                                method: 'get_param',
+//                                args: ['database.expiration_date']
+//                            }),
+//                        self._rpc({
+//                                model: 'ir.config_parameter',
+//                                method: 'get_param',
+//                                args: ['database.expiration_reason']
+//                            }),
+//                        self._rpc({
+//                                model: 'ir.config_parameter',
+//                                method: 'get_param',
+//                                args: ['database.already_linked_subscription_url']
+//                            }),
+//                        self._rpc({
+//                                model: 'ir.config_parameter',
+//                                method: 'get_param',
+//                                args: ['database.already_linked_email']
+//                            })]
+//                    ).then(function (results) {
+//                        var dbexpirationDate = results[0];
+//                        var dbalready_linked_subscription_url = results[2];
+//                        var dbalready_linked_email = results[3];
+//                        $('.oe_instance_register').hide();
+//                        $('.oe_contract_email_block').hide();
+//                        $('.oe_contract_no_email_block').hide();
+//                        $('.database_expiration_panel .alert')
+//                                .removeClass('alert-info alert-warning alert-danger');
+//                        if (dbexpirationDate !== oldDate && !dbalready_linked_subscription_url) {
+//                            $('.oe_instance_hide_panel').show();
+//                            $('.database_expiration_panel .alert').addClass('alert-success');
+//                            $('.valid_date').html(moment(dbexpirationDate).format('LL'));
+//                            $('.oe_instance_success').show();
+//                        } else if (dbalready_linked_subscription_url) {
+//                            $('.database_expiration_panel .alert').addClass('alert-danger');
+//                            $('.oe_database_already_linked, .oe_instance_register_form').show();
+//                            $('.oe_contract_sending_mail, .oe_contract_sending_mail_success, .oe_contract_sending_mail_fail').hide();
+//                            $('.oe_contract_link')
+//                                .attr('href', dbalready_linked_subscription_url)
+//                                .text(dbalready_linked_subscription_url);
+//                            if (dbalready_linked_email.length > 0) {
+//                                $('.oe_contract_email_block').show();
+//                                $('.oe_contract_email').text(dbalready_linked_email);
+//                            } else {
+//                                $('.oe_contract_no_email_block').show();
+//                            }
+//                            $('#confirm_enterprise_code').html('Retry');
+//                        } else {
+//                            $('.database_expiration_panel .alert').addClass('alert-danger');
+//                            $('.oe_instance_error, .oe_instance_register_form').show();
+//                            $('#confirm_enterprise_code').html('Retry');
+//                        }
+//                    });
+//                });
+//        });
     },
     /**
      * @private
@@ -651,89 +651,89 @@ HomeMenu.include({
      * @private
      */
     _onEnterpriseRegisterShow: function () {
-        this.$('.oe_instance_register_form').slideToggle();
+//        this.$('.oe_instance_register_form').slideToggle();
     },
     /**
      * @private
      */
     _onEnterpriseRenew: function () {
-        var self = this;
-        this._rpc({
-                model: 'ir.config_parameter',
-                method: 'get_param',
-                args: ['database.expiration_date'],
-            })
-            .then(function (oldDate) {
-                utils.set_cookie('oe_instance_hide_panel', '', -1);
-                self._rpc({
-                        model: 'publisher_warranty.contract',
-                        method: 'update_notification',
-                        args: [[]],
-                    })
-                    .then(function () {
-                        Promise.all(
-                            [self._rpc({
-                                    model: 'ir.config_parameter',
-                                    method: 'get_param',
-                                    args: ['database.expiration_date']
-                                }),
-                            self._rpc({
-                                    model: 'ir.config_parameter',
-                                    method: 'get_param',
-                                    args: ['database.expiration_reason']
-                                }),
-                            self._rpc({
-                                    model: 'ir.config_parameter',
-                                    method: 'get_param',
-                                    args: ['database.enterprise_code']
-                                })]
-                        ).then(function (results) {
-                            var newDate = results[0];
-                            var dbexpirationDate = results[1];
-                            var enterpriseCode = results[2];
-                            var mtNewDate = new moment(newDate);
-                            if (newDate !== oldDate && mtNewDate > new moment()) {
-                                $.unblockUI();
-                                $('.oe_instance_register').hide();
-                                $('.database_expiration_panel .alert')
-                                        .removeClass('alert-info alert-warning alert-danger');
-                                $('.database_expiration_panel .alert')
-                                        .addClass('alert-success');
-                                $('.valid_date').html(moment(newDate).format('LL'));
-                                $('.oe_instance_success, .oe_instance_hide_panel').show();
-                            } else {
-                                var params = enterpriseCode ? {contract: enterpriseCode} : {};
-                                window.location =
-                                    $.param.querystring("https://www.odoo.com/odoo-enterprise/renew", params);
-                            }
-                        });
-                    });
-            });
+//        var self = this;
+//        this._rpc({
+//                model: 'ir.config_parameter',
+//                method: 'get_param',
+//                args: ['database.expiration_date'],
+//            })
+//            .then(function (oldDate) {
+//                utils.set_cookie('oe_instance_hide_panel', '', -1);
+//                self._rpc({
+//                        model: 'publisher_warranty.contract',
+//                        method: 'update_notification',
+//                        args: [[]],
+//                    })
+//                    .then(function () {
+//                        Promise.all(
+//                            [self._rpc({
+//                                    model: 'ir.config_parameter',
+//                                    method: 'get_param',
+//                                    args: ['database.expiration_date']
+//                                }),
+//                            self._rpc({
+//                                    model: 'ir.config_parameter',
+//                                    method: 'get_param',
+//                                    args: ['database.expiration_reason']
+//                                }),
+//                            self._rpc({
+//                                    model: 'ir.config_parameter',
+//                                    method: 'get_param',
+//                                    args: ['database.enterprise_code']
+//                                })]
+//                        ).then(function (results) {
+//                            var newDate = results[0];
+//                            var dbexpirationDate = results[1];
+//                            var enterpriseCode = results[2];
+//                            var mtNewDate = new moment(newDate);
+//                            if (newDate !== oldDate && mtNewDate > new moment()) {
+//                                $.unblockUI();
+//                                $('.oe_instance_register').hide();
+//                                $('.database_expiration_panel .alert')
+//                                        .removeClass('alert-info alert-warning alert-danger');
+//                                $('.database_expiration_panel .alert')
+//                                        .addClass('alert-success');
+//                                $('.valid_date').html(moment(newDate).format('LL'));
+//                                $('.oe_instance_success, .oe_instance_hide_panel').show();
+//                            } else {
+//                                var params = enterpriseCode ? {contract: enterpriseCode} : {};
+//                                window.location =
+//                                    $.param.querystring("https://www.odoo.com/odoo-enterprise/renew", params);
+//                            }
+//                        });
+//                    });
+//            });
     },
     /**
      * @private
      */
     _onEnterpriseUpsell: function () {
-        var self = this;
-        var limitDate = new moment().subtract(15, 'days').format("YYYY-MM-DD");
-        this._rpc({
-                model: 'ir.config_parameter',
-                method: 'get_param',
-                args: ['database.enterprise_code'],
-            })
-            .then(function (contract) {
-                self._rpc({
-                        model: 'res.users',
-                        method: 'search_count',
-                        args: [[["share", "=", false],["login_date", ">=", limitDate]]],
-                    })
-                    .then(function (users) {
-                        var params =
-                            contract ? {contract: contract, num_users: users} : {num_users: users};
-                        window.location =
-                            $.param.querystring("https://www.odoo.com/odoo-enterprise/upsell", params);
-                    });
-            });
+//        var self = this;
+//        var limitDate = new moment().subtract(15, 'days').format("YYYY-MM-DD");
+//        this._rpc({
+//                model: 'ir.config_parameter',
+//                method: 'get_param',
+//                args: ['database.enterprise_code'],
+//            })
+//            .then(function (contract) {
+//                self._rpc({
+//                        model: 'res.users',
+//                        method: 'search_count',
+//                        args: [[["share", "=", false],["login_date", ">=", limitDate]]],
+//                    })
+//                    .then(function (users) {
+//                        var params =
+//                            contract ? {contract: contract, num_users: users} : {num_users: users};
+//                        window.location =
+//                            $.param.querystring("https://www.odoo.com/odoo-enterprise/upsell", params);
+//                    });
+//            });
     },
 });
 
