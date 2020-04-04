@@ -1,5 +1,5 @@
 {
-    'name': 'Enark',
+    'name': 'Enark Theme',
     'description': 'Enark Theme',
     'category': 'Theme/Corporate',
     'summary': 'Corporate, Business, Finance, Services',
@@ -17,7 +17,6 @@
         'static/description/enark_description.jpg',
         'static/description/enark_screenshot.jpg',
     ],
-    'price': 199,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-enark.odoo.com/page/demo_page_home_1',
 }

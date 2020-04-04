@@ -1,5 +1,5 @@
 {
-    'name': 'Be Wise',
+    'name': 'Be Wise Theme',
     'description': 'Be Wise Theme',
     'category': 'Theme/Education',
     'summary': 'Education, Schools, Young, Play, Kids, Sports',
@@ -18,7 +18,6 @@
         'static/description/bewise_description.jpg',
         'static/description/bewise_screenshot.jpeg',
     ],
-    'price': 149,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-bewise.odoo.com/page/demo_page_demo_1',
 }

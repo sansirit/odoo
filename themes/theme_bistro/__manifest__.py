@@ -15,7 +15,6 @@
         'static/description/bistro_cover.jpg',
         'static/description/bistro_screenshot.jpeg',
     ],
-    'price': 4,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-bistro.odoo.com'
 }

@@ -1,5 +1,5 @@
 {
-    'name': 'Theme Kiddo',
+    'name': 'Kiddo Theme',
     'description': 'Kiddo theme for Odoo Website',
     'category': 'Theme/Retail',
     'summary': 'Toys, Games, Kids, Boys, Girls, Stores',
@@ -16,7 +16,6 @@
         'static/description/Kiddo_description.png',
         'static/description/kiddo_screenshot.jpeg',
     ],
-    'price': 199,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-kiddo.odoo.com/page/demo'
 }

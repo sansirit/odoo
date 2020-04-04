@@ -14,7 +14,6 @@
         'static/description/beauty_description.png',
         'static/description/beauty_screenshot.jpg',
     ],
-    'price': 4,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-beauty.odoo.com',
 }

@@ -18,7 +18,6 @@
         'static/description/avantgarde_screenshot.jpg',
     ],
     'depends': ['theme_common'],
-    'price': 199,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-avantgarde.odoo.com',
 }

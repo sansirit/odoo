@@ -19,7 +19,6 @@
         'static/description/nano_cover.gif',
         'static/description/nano_screenshot.jpeg',
     ],
-    'price': 199,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-nano.odoo.com/page/demo_page_01'
 }

@@ -14,7 +14,6 @@
         'static/description/vehicle_description.png',
         'static/description/vehicle_screenshot.jpeg',
     ],
-    'price': 4,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-vehicle.odoo.com',
 }

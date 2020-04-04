@@ -17,7 +17,6 @@
         'static/description/Clean_description.jpg',
         'static/description/clean_screenshot.jpg',
     ],
-    'price': 199,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-clean.odoo.com/page/demo_page_home',
 }

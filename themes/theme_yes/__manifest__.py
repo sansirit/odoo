@@ -15,7 +15,6 @@
         'static/description/yes_description.png',
         'static/description/yes_screenshot.jpeg',
     ],
-    'price': 4,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-yes.odoo.com',
 }

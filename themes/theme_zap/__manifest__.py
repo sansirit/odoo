@@ -14,7 +14,6 @@
         'static/description/zap_cover.gif',
         'static/description/zap_screenshot.jpg',
     ],
-    'price': 4,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-zap.odoo.com'
 }

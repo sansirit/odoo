@@ -15,7 +15,6 @@
         'static/description/real_estate_description.png',
         'static/description/real_estate_screenshot.jpeg',
     ],
-    'price': 4,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-real-estate.odoo.com',
 }

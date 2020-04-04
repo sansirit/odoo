@@ -18,7 +18,6 @@
         'static/description/loftspace_description.png',
         'static/description/loftspace_screenshot.jpg',
     ],
-    'price': 195,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-loftspace.odoo.com/page/demo',
 }

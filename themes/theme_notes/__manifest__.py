@@ -16,7 +16,6 @@
         'static/description/Notes_description.png',
         'static/description/notes_screenshot.jpeg',
     ],
-    'price': 199,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-notes.odoo.com/page/demo',
 }

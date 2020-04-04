@@ -1,5 +1,5 @@
 {
-    'name': 'Graphene theme',
+    'name': 'Graphene Theme',
     'description': 'Light colours, thin text, clean and sharp design.',
     'category': 'Theme/Corporate',
     'summary': 'Design, Tech, Computers, IT, Blogs',
@@ -18,7 +18,6 @@
         'static/description/graphene_screenshot.jpg',
     ],
     'depends': ['theme_common', 'website_animate'],
-    'price': 199,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-graphene.odoo.com'
 }

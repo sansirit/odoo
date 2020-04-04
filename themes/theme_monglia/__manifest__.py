@@ -17,7 +17,6 @@
         'static/description/monglia_description.png',
         'static/description/monglia_screenshot.jpeg',
     ],
-    'price': 195,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-monglia.odoo.com',
 }

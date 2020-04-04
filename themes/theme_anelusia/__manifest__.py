@@ -18,7 +18,6 @@
         'static/description/anelusia_description.png',
         'static/description/anelusia_screenshot.jpg',
     ],
-    'price': 199,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-anelusia.odoo.com/page/demo1',
 }

@@ -24,7 +24,6 @@
         'static/description/treehouse_cover.jpg',
         'static/description/treehouse_screenshot.jpg',
     ],
-    'price': 195,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-treehouse.odoo.com/page/demo_page_01',
 }

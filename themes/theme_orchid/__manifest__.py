@@ -14,7 +14,6 @@
         'static/description/orchid_description.png',
         'static/description/orchid_screenshot.jpeg',
     ],
-    'price': 4,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-orchid.odoo.com',
 }

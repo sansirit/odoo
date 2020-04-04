@@ -14,7 +14,6 @@
         'static/description/bookstore_description.png',
         'static/description/bookstore_screenshot.jpeg',
     ],
-    'price': 4,
-    'currency': 'EUR',
+    'license': 'LGPL-3',
     'live_test_url': 'https://theme-bookstore.odoo.com'
 }
